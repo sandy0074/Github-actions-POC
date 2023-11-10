@@ -26,13 +26,3 @@ jobs:
       - name: Analyse-step
         run: |
           echo 'This step to Analyse the code'
-
-  deploy:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
-    steps:
-      - name: Deploy-step
-        run: |
-          echo 'This step to Deploy the code'
-
-
