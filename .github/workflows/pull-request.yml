@@ -26,3 +26,10 @@ jobs:
       - name: Analyse-step
         run: |
           echo 'This step to Analyse the code'
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint-step
+        run: |
+          echo 'This step to Lint the code'
