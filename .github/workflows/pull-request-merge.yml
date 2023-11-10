@@ -1,8 +1,9 @@
-name: Pull request Workflow
+name: Pull request Merge-event Workflow
 
 on:
-  pull_request:
-    typed: [closed]
+  push:
+    branches:
+      - main
 
 jobs:
   deploy:
