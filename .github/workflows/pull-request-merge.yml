@@ -11,7 +11,8 @@ jobs:
     steps:
       - name: Build-step
         run: |
-          echo 'This step to build the code'
+          echo 'In this step code-compile will be performed'
+          echo 'mvn clean package -D dockerfile.skip=true'
   
   test:
     runs-on: ubuntu-latest
@@ -19,17 +20,34 @@ jobs:
       - name: Test-step
         run: |
           echo 'This step to test the code'
+          echo 'Sonarqube test'
+          echo 'junit-test: mvn test'
 
-  analyse:
+  build-artifacts:
     runs-on: ubuntu-latest
     steps:
-      - name: Analyse-step
+      - name: Build-artifacts-step
         run: |
-          echo 'This step to Analyse the code'
-          
-  deploy:
+          echo 'This step to Build-artifacts'
+          echo 'mvn install'
+
+  publish-artifacts:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy-step
+      - name: Publish-artifacts-step
         run: |
-          echo 'This step to Deploy the code'
+          echo 'This step to Publish-artifacts'
+
+  build-docker-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build-docker-image-step
+        run: |
+          echo 'This step to Build-docker-image'
+
+  docker-tag-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Docker-tag-and-push-step
+        run: |
+          echo 'This step to Docker-tag-and-push-step'
