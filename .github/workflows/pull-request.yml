@@ -11,7 +11,8 @@ jobs:
     steps:
       - name: Build-step
         run: |
-          echo 'This step to build the code'
+          echo 'In this step code-compile will be performed'
+          echo 'mvn clean package -D dockerfile.skip=true'
   
   test:
     runs-on: ubuntu-latest
@@ -19,17 +20,5 @@ jobs:
       - name: Test-step
         run: |
           echo 'This step to test the code'
-
-  analyse:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Analyse-step
-        run: |
-          echo 'This step to Analyse the code'
-
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Lint-step
-        run: |
-          echo 'This step to Lint the code'
+          echo 'Sonarqube test'
+          echo 'junit-test: mvn test'
