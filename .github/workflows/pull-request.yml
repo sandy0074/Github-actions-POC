@@ -4,5 +4,35 @@ on:
   pull_request:
     branches:
       - main
-      
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build-step
+        run: |
+          echo 'This step to build the code'
+  
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test-step
+        run: |
+          echo 'This step to test the code'
+
+  analyse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Analyse-step
+        run: |
+          echo 'This step to Analyse the code'
+
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/head/main'
+    steps:
+      - name: Deploy-step
+        run: |
+          echo 'This step to Deploy the code'
+
 
