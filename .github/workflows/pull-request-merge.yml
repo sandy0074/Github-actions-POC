@@ -1,7 +1,8 @@
 name: Pull request Merge-event Workflow
 
 on:
-  push: [main]
+  push:
+    - main
 
 jobs:
   deploy:
