@@ -1,4 +1,4 @@
-name: Pull request Workflow
+name: Pull request Raise-event Workflow
 
 on:
   pull_request:
