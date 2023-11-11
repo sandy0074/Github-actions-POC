@@ -50,4 +50,4 @@ jobs:
     steps:
       - name: Docker-tag-and-push-step
         run: |
-          echo 'This step to Docker-tag-and-push-step'
+          echo 'This step to Docker-tag-and-push-to-Github-container'
