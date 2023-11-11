@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.coveros.demo</groupId>
-  <artifactId>helloworld</artifactId>
+  <artifactId>helloworld-java-maven</artifactId>
   <version>1.1</version>
   <packaging>jar</packaging>
 
@@ -14,14 +14,6 @@
   <url>https://www.coveros.com/</url>
   <inceptionYear>2018</inceptionYear>
 
-  <distributionManagement>
-    <repository>
-      <id>github</id>
-      <name>GitHub Packages</name>
-      <url>https://maven.pkg.github.com/sandy0074/Github-actions-POC</url>
-    </repository>
-  </distributionManagement>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -29,6 +21,14 @@
 
     <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
   </properties>
+
+    <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/sandy0074/Github-actions-POC</url>
+    </repository>
+  </distributionManagement>
 
   <build>
     <plugins>
