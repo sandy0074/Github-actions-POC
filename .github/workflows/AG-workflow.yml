@@ -1,12 +1,12 @@
 name: AG-Workflow
 
 on:
-  pull_request_review:
-    types: [submitted]
+  push:
+    branches:
+      - main
 
 jobs:
   build:
-    if: github.event.review.state == 'APPROVED'
     runs-on: ubuntu-latest
     steps:
       - name: Build-step
@@ -50,4 +50,4 @@ jobs:
     steps:
       - name: Docker-tag-and-push-step
         run: |
-          echo 'This step to Docker-tag-and-push-step'
+          echo 'This step to Docker-tag-and-push-to-Github-container'
