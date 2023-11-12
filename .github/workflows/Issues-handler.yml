@@ -1,7 +1,7 @@
 name: Issues-Handler
 on: issues
 jobs:
-  Issues-handler:
+  output-data:
     runs-on: ubuntu-latest
     steps:
       - name: Output the event details
