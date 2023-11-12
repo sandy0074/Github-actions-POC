@@ -1,6 +1,6 @@
 name: Issues-Handler
 on: issues
-job:
+jobs:
   Issues-handler:
   runs-on: ubuntu-latest
   steps:
