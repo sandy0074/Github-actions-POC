@@ -2,7 +2,7 @@ name: Issues-Handler
 on: issues
 jobs:
   Issues-handler:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Output the event details
-      run: echo "${{ toJSON(github.event) }}"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output the event details
+        run: echo "${{ toJSON(github.event) }}"
